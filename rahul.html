@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>साळवे लाईट हाऊस - घरगुती उपकरणे दुरुस्ती</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root {
+            --primary-color: #1a237e;
+            --secondary-color: #ff6f00;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* Navigation */
+        #mainNav {
+            background: var(--primary-color);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Banner */
+        .shop-banner {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .banner-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .banner-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .banner-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .phone-number {
+            background: var(--secondary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .featured-services {
+            padding: 4rem 2rem;
+            background: var(--light-bg);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        /* Why Us Section */
+        .why-us {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            padding: 2rem;
+            background: var(--light-bg);
+            border-radius: 8px;
+        }
+
+        .feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* CTA Button */
+        .cta-button {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            background: #ff8f00;
+        }
+
+        /* Section Headers */
+        section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                <li><a href="about.html">आमच्याबद्दल</a></li>
+                <li><a href="products.html">उत्पादने</a></li>
+                <li><a href="services.html">सेवा</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+        </nav>
+        <div class="shop-banner">
+            <img src="./images/Screenshot 2025-01-30 165506.png" alt="Banner Background" class="banner-bg">
+            <div class="banner-content">
+                <span class="phone-number">9922313587</span>
+                <h1 class="banner-title">साळवे लाईट हाऊस</h1>
+                <p class="banner-subtitle">
+                    मोटर दुरुस्ती, इलेक्ट्रिकल, मशीन, इस्त्री, कुलर, फ्रिज, पोटर प्रेशरची कामे केली जातील.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured-services">
+            <h2>आमच्या सेवा</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="./images/hq720 (2).jpg" alt="मोटर">
+                    <h3>मोटर दुरुस्ती</h3>
+                    <p>पाण्याची मोटर, पंप दुरुस्ती</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/shopping (1).webp" alt="फॅन">
+                    <h3>फॅन दुरुस्ती</h3>
+                    <p>सीलिंग फॅन, टेबल फॅन</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/whirlpool-washing-machine-9-kg-500x500.webp" alt="वॉशिंग मशीन">
+                    <h3>वॉशिंग मशीन</h3>
+                    <p>सर्व प्रकारच्या वॉशिंग मशीन</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/images (9).jpeg" alt="इस्त्री">
+                    <h3>इस्त्री दुरुस्ती</h3>
+                    <p>इस्त्री आणि हीटर दुरुस्ती</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-us">
+            <h2>का आमची निवड करावी?</h2>
+            <div class="features">
+                <div class="feature">
+                    <i class="icon">⭐</i>
+                    <h3>अनुभवी कारागीर</h3>
+                    <p>15+ वर्षांचा अनुभव</p>
+                </div>
+                <div class="feature">
+                    <i class="icon">⚡</i>
+                    <h3>त्वरित सेवा</h3>
+                    <p>24 तासांत दुरुस्ती</p>
+                </div>
+                <div class="feature">
+                    <i class="icon">💰</i>
+                    <h3>वाजवी दर</h3>
+                    <p>बाजारातील सर्वात स्पर्धात्मक दर</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>संपर्क</h3>
+                <p>दुकान पत्ता: मेन रोड, पुणे</p>
+                <p>फोन: 9922213578</p>
+                <p>वेळ: सकाळी ९ ते रात्री 10</p>
+            </div>
+            <div class="footer-section">
+                <h3>सेवा</h3>
+                <ul>
+                    <li>मोटर दुरुस्ती</li>
+                    <li>फॅन दुरुस्ती</li>
+                    <li>वॉशिंग मशीन दुरुस्ती</li>
+                    <li>इस्त्री दुरुस्ती</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 साळवे लाईट हाऊस - सर्व हक्क राखीव</p>
+        </div>
+    </footer>
+</body>
+</html>

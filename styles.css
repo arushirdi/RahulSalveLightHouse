@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #34495e;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.shop-banner {
+    padding: 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.shop-banner .phone-number {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.banner-title {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.banner-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.hero {
+    padding: 50px 20px;
+    background-color: #f39c12;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #ff9900;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.featured-services {
+    padding: 20px;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #ecf0f1;
+    padding: 10px;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.why-us {
+    padding: 20px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.feature {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #2c3e50;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .shop-banner {
+        position: relative;
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        overflow: hidden;
+      }
+      
+      /* Background image styles */
+      .banner-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;  /* Adjust opacity (0 to 1) to set image transparency */
+      }
+      
+      /* Content overlay styles */
+      .banner-content {
+        position: relative;  /* Relative to .shop-banner container */
+        z-index: 1;          /* Place content above the background image */
+        text-align: center;
+        color: white;
+        padding: 20px;
+        
+        /* Center the content vertically and horizontally */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      .phone-number {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      
+      .banner-title {
+        font-size: 36px;
+        margin: 10px 0;
+      }
+      
+      .banner-subtitle {
+        font-size: 18px;
+      }
+      
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
