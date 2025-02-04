@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,7 +82,7 @@
         .banner-title {
             font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .banner-subtitle {
@@ -115,7 +116,7 @@
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s;
         }
@@ -179,7 +180,7 @@
             text-align: center;
             margin-top: 2rem;
             padding-top: 1rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Responsive Design */
@@ -225,17 +226,19 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav id="mainNav">
             <ul class="nav-links">
-                <li><a href="index.html">मुख्यपृष्ठ</a></li>
+                <li><a href="rahul.html">मुख्यपृष्ठ</a></li>
                 <li><a href="about.html">आमच्याबद्दल</a></li>
                 <li><a href="products.html">उत्पादने</a></li>
                 <li><a href="services.html">सेवा</a></li>
                 <li><a href="contact.html">संपर्क</a></li>
             </ul>
         </nav>
+        <!-- Banner Section -->
         <div class="shop-banner">
             <img src="./images/Screenshot 2025-01-30 165506.png" alt="Banner Background" class="banner-bg">
             <div class="banner-content">
@@ -244,13 +247,209 @@
                 <p class="banner-subtitle">
                     मोटर दुरुस्ती, इलेक्ट्रिकल, मशीन, इस्त्री, कुलर, फ्रिज, पोटर प्रेशरची कामे केली जातील.
                 </p>
+                <button id="book-appointment-btn" class="cta-button">अपॉइंटमेंट बुक करा</button>
             </div>
         </div>
+
+        <!-- Modal Form -->
+        <div id="appointment-form">
+            <div class="form-container">
+                <h2>अपॉइंटमेंट बुक करा</h2>
+
+                <label for="city">शहर निवडा</label>
+                <select id="city" name="city">
+                    <option value="astagaon">आस्तागाव</option>
+                    <option value="adagaon_khurd">अदागाव खुर्द</option>
+                    <option value="adagaon_budruk">अदागाव बुद्रुक</option>
+                    <option value="ekarukhe">एकरुखे</option>
+                    <option value="elamawadi">एळमावाडी</option>
+                    <option value="kanakuri">कणकुरी</option>
+                    <option value="kelavad_khurd">केलवाड खुर्द</option>
+                    <option value="kelavad_budruk">केलवाड बुद्रुक</option>
+                    <option value="korhale">कोरहाळे</option>
+                    <option value="kolhar_budruk">कोल्हार बुद्रुक</option>
+                    <!-- <option value="khadakevake">खडकेवाक</option>
+                    <option value="gogalagaon">गोगलगाव</option> -->
+                    <option value="chitali">चितळी</option>
+                    <!-- <option value="cholakewadi">चोळकेवाडी</option>
+                    <option value="chandrapur">चंद्रपूर</option>
+                    <option value="jalagaon">जलगाव</option> -->
+                    <option value="dorhale">डोरहाळे</option>
+                    <option value="tarakasawadi">तरकासवाडी</option>
+                    <option value="tisagaon">तिसागाव</option>
+                    <option value="dahigaon_korhale">दहिगाव कोरहाळे</option>
+                    <!-- <option value="dadh_budruk">दध बुद्रुक</option>
+                    <option value="durgapur">दुर्गापूर</option>
+                    <option value="dhanagarawadi">धनगरवाडी</option>
+                    <option value="nathupatalachi_wadi">नथूपाटलाची वाडी</option> -->
+                    <option value="nadurkhi_khurd">नदूर्खी खुर्द</option>
+                    <option value="nadurkhi_budruk">नदूर्खी बुद्रुक</option>
+                    <option value="nandur_khurd">नंदुर खुर्द</option>
+                    <option value="nandur_budruk">नंदुर बुद्रुक</option>
+                    <option value="nighoj">निघोज</option>
+                    <option value="nimagaon_korhale">निमगाव कोरहाळे</option>
+                    <option value="pathare_budruk">पठारे बुद्रुक</option>
+                    <option value="pimpalawadi">पिंपलवाडी</option>
+                    <option value="pimpalas">पिंपलास</option>
+                    <option value="pimpri_nirmal">पिंपरी निरमल</option>
+                    <option value="pimpri_lokai">पिंपरी लोकई</option>
+                    <option value="punatamba">पुनतम्बा</option>
+                    <!-- <option value="babhaleshvar_khurd">बाभलेश्वर खुर्द</option>
+                    <option value="babhaleshvar_budruk">बाभलेश्वर बुद्रुक</option>
+                    <option value="bhagaonatipur">भागोणाटीपूर</option>
+                    <option value="mamadapur">मामदापूर</option>
+                    <option value="morawadi">मोरावाडी</option>
+                    <option value="rastapur">रस्तापुर</option> -->
+                    <!-- <option value="rajuri">राजुरी</option>
+                    <option value="ramapurawadi">रामापुरवाडी</option> -->
+                    <option value="rahata">राहता</option>
+                    <!-- <option value="ranjanakhol">रांजनाखोल</option> -->
+                    <option value="ranjanagaon_khurd">रांजनगाव खुर्द</option>
+                    <option value="rui">रुई</option>
+                    <option value="loni_khurd">लोणी खुर्द</option>
+                    <option value="loni_budruk">लोणी बुद्रुक</option>
+                    <!-- <option value="lohagaon">लोहागाव</option> -->
+                    <option value="vakadi">वाकडी</option>
+                    <option value="valaki">वाळकी</option>
+                    <option value="shirdi">शिर्डी</option>
+                    <!-- <option value="shingaone">शिंगओने</option> -->
+                    <option value="sakuri">साकुरी</option>
+                    <option value="savalivihir_khurd">सावलीविहिर खुर्द</option>
+                    <option value="savalivihir_budruk">सावलीविहिर बुद्रुक</option>
+                    <!-- <option value="sambhajinagar">संभाजीनगर</option>
+                    <option value="hanumantagaon">हनुमंतगाव</option>
+                    <option value="hasanapur">हसनापूर</option> -->
+                    <option value="kopargaon">कोपरगाव</option> <!-- Added Kopargaon here -->
+                </select>
+
+
+                <label for="date-time">तारीख आणि वेळ निवडा</label>
+                <input type="datetime-local" id="date-time" name="date-time" required>
+
+                <p><strong>टीप:</strong> भेट देण्याचे वेळ 8am ते 8pm आहे.</p>
+
+                <h3>वैयक्तिक तपशील</h3>
+
+                <label for="name">पूर्ण नाव*</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="mobile">मोबाइल नंबर*</label>
+                <input type="text" id="mobile" name="mobile" required>
+                <!-- Additional Field: Problem and Issue -->
+                <label for="issue">समस्या आणि मुद्दा</label>
+                <textarea id="issue" name="issue" placeholder="Enter the issue or problem details" required></textarea>
+
+                <label for="message">पाठवा संदेश</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit" class="cta-button">सादर करा</button>
+                <button type="button" class="cta-button" id="close-form-btn">बंद करा</button>
+            </div>
+        </div>
+
+        <!-- Icon to open the modal -->
+        <!-- Icon to open the modal (Contact Book Icon) -->
+        <div id="open-modal-icon" class="open-modal-icon">&#x1F4D3;</div> <!-- 📓 Book Icon -->
+        <script>
+            // Get the button and form elements
+            const bookAppointmentButton = document.getElementById('book-appointment-btn');
+            const appointmentForm = document.getElementById('appointment-form');
+            const closeFormButton = document.getElementById('close-form-btn');
+            const openModalIcon = document.getElementById('open-modal-icon');
+
+            // Show the form when the button is clicked
+            bookAppointmentButton.addEventListener('click', function () {
+                appointmentForm.style.display = 'block'; // Show the form
+            });
+
+            // Show the form when the icon is clicked
+            openModalIcon.addEventListener('click', function () {
+                appointmentForm.style.display = 'block'; // Show the form
+            });
+
+            // Close the form when the close button is clicked
+            closeFormButton.addEventListener('click', function () {
+                appointmentForm.style.display = 'none'; // Hide the form
+            });
+
+        </script>
+        <style>
+            /* Basic Styling */
+
+
+            .banner-title {
+                font-size: 2rem;
+                font-weight: bold;
+            }
+
+            .cta-button {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                cursor: pointer;
+                font-size: 1rem;
+            }
+
+            /* Modal Styling */
+            #appointment-form {
+                display: none;
+                position: fixed;
+                top: 50%;
+                right: 0;
+                width: 300px;
+                height: auto;
+                background-color: white;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                border-radius: 8px;
+                z-index: 1000;
+                transform: translateY(-50%);
+            }
+
+            .form-container {
+                text-align: left;
+            }
+
+            form input,
+            form select,
+            form textarea {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            form button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            form button[type="button"] {
+                background-color: red;
+            }
+
+            /* Icon to open modal */
+            #open-modal-icon {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                font-size: 2rem;
+                cursor: pointer;
+                z-index: 1000;
+            }
+        </style>
     </header>
 
     <main>
         <section class="featured-services">
-            <h2>आमच्या सेवा</h2>
+            <h2>आमच्या सेवा घरगुती उपकरणे दुरुस्ती</h2>
             <div class="service-grid">
                 <div class="service-card">
                     <img src="./images/hq720 (2).jpg" alt="मोटर">
@@ -271,6 +470,21 @@
                     <img src="./images/images (9).jpeg" alt="इस्त्री">
                     <h3>इस्त्री दुरुस्ती</h3>
                     <p>इस्त्री आणि हीटर दुरुस्ती</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/hq720 (2).jpg" alt="मोटर">
+                    <h3>मोटर दुरुस्ती</h3>
+                    <p>पाण्याची मोटर, पंप दुरुस्ती</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/shopping (1).webp" alt="फॅन">
+                    <h3>फॅन दुरुस्ती</h3>
+                    <p>सीलिंग फॅन, टेबल फॅन</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/whirlpool-washing-machine-9-kg-500x500.webp" alt="वॉशिंग मशीन">
+                    <h3>वॉशिंग मशीन</h3>
+                    <p>सर्व प्रकारच्या वॉशिंग मशीन</p>
                 </div>
             </div>
         </section>
@@ -295,13 +509,137 @@
                 </div>
             </div>
         </section>
+
+        <section class="featured-services">
+            <h2>"आमच्या अतिरिक्त सेवा - लाइटिंग फिटिंग"</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="./images/pvc-fitting.jpg" alt="PVC फिटिंग">
+                    <h3>PVC फिटिंग</h3>
+                    <p>उच्च दर्जाच्या PVC फिटिंग सोल्युशन्स.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/hotel-fitting.jpg" alt="हॉटेल फिटिंग">
+                    <h3>हॉटेल फिटिंग</h3>
+                    <p>हॉटेलसाठी व्यावसायिक फिटिंग सेवा.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/home-fitting.jpg" alt="होम फिटिंग">
+                    <h3>होम फिटिंग</h3>
+                    <p>घरगुती फिटिंगसाठी सर्वोत्तम उपाय.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/school-fitting.jpg" alt="शाळा फिटिंग">
+                    <h3>शाळा फिटिंग</h3>
+                    <p>शाळांसाठी सुरक्षित आणि टिकाऊ फिटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/hospital-fitting.jpg" alt="हॉस्पिटल फिटिंग">
+                    <h3>हॉस्पिटल फिटिंग</h3>
+                    <p>आरोग्य सेवा क्षेत्रासाठी विशेष फिटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/shop-fitting.jpg" alt="शॉप फिटिंग">
+                    <h3>शॉप फिटिंग</h3>
+                    <p>दुकानासाठी आकर्षक फिटिंग सोल्युशन्स.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/it-company-fitting.jpg" alt="आयटी कंपनी फिटिंग">
+                    <h3>आयटी कंपनी फिटिंग</h3>
+                    <p>आयटी ऑफिससाठी आधुनिक फिटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/royal-house-fitting.jpg" alt="रॉयल हाउस फिटिंग">
+                    <h3>रॉयल हाउस फिटिंग</h3>
+                    <p>शाही घरांसाठी एलिगंट फिटिंग डिझाईन्स.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/building-fitting.jpg" alt="बिल्डिंग आणि होम फिटिंग">
+                    <h3>बिल्डिंग आणि होम फिटिंग</h3>
+                    <p>बिल्डिंग आणि घरांसाठी संपूर्ण फिटिंग सोल्युशन्स.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="additional-services">
+            <h2>"आमच्या अतिरिक्त सेवा - लायटिंग आणि लाईट्स आकर्षण"</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="./images/wireless-lighting-solutions-7.webp" alt="लाइटिंग सोल्युशन्स">
+                    <h3>लाइटिंग सोल्युशन्स</h3>
+                    <p>सर्व प्रकारच्या कार्यक्रमांसाठी परिपूर्ण लाइटिंग सेवा.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/images (16).jpeg" alt="इव्हेंट लाइटिंग आणि सजावट">
+                    <h3>इव्हेंट लाइटिंग आणि सजावट</h3>
+                    <p>आकर्षक लाइटिंग व सजावट सर्व कार्यक्रमांसाठी.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/c8292f2d01c95395f34c4563db331f51.jpg" alt="लग्न">
+                    <h3>लग्न</h3>
+                    <p>लग्न समारंभासाठी आकर्षक लाइटिंग आणि सजावट.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/images (17).jpeg" alt="वाढदिवस">
+                    <h3>लग्न वाढदिवस</h3>
+                    <p>वाढदिवस साजरा करण्यासाठी खास सजावट आणि लाइटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/-5utuhhlv76.avif" alt="Baby Shower">
+                    <h3>बेबी शॉवर</h3>
+                    <p>बेबी शॉवर समारंभासाठी आकर्षक लाइटिंग आणि सजावट.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/homehop-solar-outdoor-string-lights-300-led-for-home-garden-balcony-terrace-lawn-wall-waterproof-rechargeable-decorative-lamp-diwali-decoration-item-6m-warm-color-product-images-orv8jf7r2.webp"
+                        alt="वाढदिवस">
+                    <h3>वाढदिवस</h3>
+                    <p>वाढदिवस साजरा करण्यासाठी खास सजावट आणि लाइटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/sri-balaji-light-decoration-nagaur-inverter-dealers-leq44ivlm6.avif"
+                        alt="गृहप्रवेश">
+                    <h3>गृहप्रवेश</h3>
+                    <p>नवीन घरासाठी स्वागतार्ह लाइटिंग सोल्युशन्स.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/27_10_2023-best_diwali_lights_decoration_2_23566483.jpg" alt="दिवाळी लाइटिंग">
+                    <h3>दिवाळी लाइटिंग</h3>
+                    <p>दिवाळीसाठी विशेष आकर्षक लाइटिंग डिझाईन्स.</p>
+                </div>
+
+                <!-- New Year Lighting Service Card -->
+                <div class="service-card">
+                    <img src="./images/images (20).jpeg" alt="नववर्ष डेकोरेशन लाइटिंग">
+                    <h3>नववर्ष डेकोरेशन लाइटिंग</h3>
+                    <p>नववर्षाच्या स्वागतासाठी खास आकर्षक डेकोरेशन लाइटिंग.</p>
+                </div>
+
+                <!-- Get Together Decoration Lighting Service Card -->
+                <div class="service-card">
+                    <img src="./images/71dBIzfnyQL._AC_UF350,350_QL80_.jpg" alt="गेट टुगेदर डेकोरेशन लाइटिंग">
+                    <h3>गेट टुगेदर डेकोरेशन लाइटिंग</h3>
+                    <p>गेट टुगेदर समारंभासाठी आकर्षक डेकोरेशन लाइटिंग.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/sri-balaji-light-decoration-nagaur-inverter-dealers-leq44ivlm6.avif"
+                        alt="गृहप्रवेश">
+                    <h3>गृहप्रवेश</h3>
+                    <p>नवीन घरासाठी स्वागतार्ह लाइटिंग सोल्युशन्स.</p>
+                </div>
+                <div class="service-card">
+                    <img src="./images/c8292f2d01c95395f34c4563db331f51.jpg" alt="लग्न">
+                    <h3>लग्न</h3>
+                    <p>लग्न समारंभासाठी आकर्षक लाइटिंग आणि सजावट.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="footer-content">
             <div class="footer-section">
                 <h3>संपर्क</h3>
-                <p>दुकान पत्ता: मेन रोड, पुणे</p>
+                <p>दुकान पत्ता: मेन रोड, Shirdi</p>
                 <p>फोन: 9922213578</p>
                 <p>वेळ: सकाळी ९ ते रात्री 10</p>
             </div>
@@ -320,4 +658,5 @@
         </div>
     </footer>
 </body>
+
 </html>
